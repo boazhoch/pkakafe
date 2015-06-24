@@ -80,7 +80,7 @@
 				if( !empty($zerif_aboutus_biglefttitle) ):
 
 
-					echo '<div class="col-lg-' . $colCount . ' col-md-' . $colCount . ' column">';
+					echo '<div class="col-lg-' . $colCount . ' col-md-' . $colCount . ' column pull-right">';
 
 
 						echo '<div class="big-intro" data-scrollreveal="enter left after 0s over 1s">';
@@ -100,7 +100,7 @@
 
 			if( !empty($zerif_aboutus_text) ):
 
-				echo '<div class="col-lg-' . $colCount . ' col-md-' . $colCount . ' column" data-scrollreveal="enter bottom after 0s over 1s">';
+				echo '<div class="col-lg-' . $colCount . ' col-md-' . $colCount . ' column pull-right" data-scrollreveal="enter bottom after 0s over 1s">';
 
 
 						echo '<p>';
@@ -126,7 +126,7 @@
 		<!-- COLUMN 1 - SKILSS-->
 
 
-		<div class="col-lg-<?php echo $colCount; ?> col-md-<?php echo $colCount; ?> column">
+		<div class="col-lg-<?php echo $colCount; ?> col-md-<?php echo $colCount; ?> column pull-right">
 
 
 			<ul class="skills" data-scrollreveal="enter right after 0s over 1s">
@@ -150,7 +150,7 @@
 						if( !empty($zerif_aboutus_feature1_nr) ):
 
 
-							echo '<div class="skill-count">';
+							echo '<div class="skill-count pull-right">';
 
 
 								echo '<input type="text" value="'.$zerif_aboutus_feature1_nr.'" data-thickness=".2" class="skill1">';
@@ -162,11 +162,11 @@
 						endif;
 
 						if( !empty($zerif_aboutus_feature1_title) ):
-							echo '<h6>'.__($zerif_aboutus_feature1_title,'zerif-lite').'</h6>';
+							echo '<h6 class="pull-right">'.__($zerif_aboutus_feature1_title,'zerif-lite').'</h6>';
 						endif;
 
 						if( !empty($zerif_aboutus_feature1_text) ):
-							echo '<p>'.__($zerif_aboutus_feature1_text,'zerif-lite').'</p>';
+							echo '<p class="pull-right">'.__($zerif_aboutus_feature1_text,'zerif-lite').'</p>';
 						endif;
 
 
@@ -194,7 +194,7 @@
 						if( !empty($zerif_aboutus_feature2_nr) ):
 
 
-							echo '<div class="skill-count">';
+							echo '<div class="skill-count pull-right">';
 
 
 								echo '<input type="text" value="'.$zerif_aboutus_feature2_nr.'" data-thickness=".2" class="skill2">';
@@ -209,11 +209,11 @@
 						$zerif_aboutus_feature2_text = get_theme_mod('zerif_aboutus_feature2_text');
 
 						if( !empty($zerif_aboutus_feature2_title) ):
-							echo '<h6>'.__($zerif_aboutus_feature2_title,'zerif-lite').'</h6>';
+							echo '<h6 class="pull-right">'.__($zerif_aboutus_feature2_title,'zerif-lite').'</h6>';
 						endif;
 
 						if( !empty($zerif_aboutus_feature2_text) ):
-							echo '<p>'.__($zerif_aboutus_feature2_text,'zerif-lite').'</p>';
+							echo '<p class="pull-right">'.__($zerif_aboutus_feature2_text,'zerif-lite').'</p>';
 						endif;
 
 
@@ -240,7 +240,7 @@
 						if( !empty($zerif_aboutus_feature3_nr) ):
 
 
-							echo '<div class="skill-count">';
+							echo '<div class="skill-count pull-right">';
 
 
 								echo '<input type="text" value="'.$zerif_aboutus_feature3_nr.'" data-thickness=".2" class="skill3">';
@@ -255,11 +255,11 @@
 						$zerif_aboutus_feature3_text = get_theme_mod('zerif_aboutus_feature3_text');
 
 						if( !empty($zerif_aboutus_feature3_title) ):
-							echo '<h6>'.__($zerif_aboutus_feature3_title,'zerif-lite').'</h6>';
+							echo '<h6 class="pull-right">'.__($zerif_aboutus_feature3_title,'zerif-lite').'</h6>';
 						endif;
 
 						if( !empty($zerif_aboutus_feature3_text) ):
-							echo '<p>'.__($zerif_aboutus_feature3_text,'zerif-lite').'</p>';
+							echo '<p class="pull-right">'.__($zerif_aboutus_feature3_text,'zerif-lite').'</p>';
 						endif;
 
 
@@ -284,7 +284,7 @@
 						if( !empty($zerif_aboutus_feature4_nr) ):
 
 
-							echo '<div class="skill-count">';
+							echo '<div class="skill-count pull-right">';
 
 
 								echo '<input type="text" value="'.$zerif_aboutus_feature4_nr.'" data-thickness=".2" class="skill4">';
@@ -299,11 +299,11 @@
 						$zerif_aboutus_feature4_text = get_theme_mod('zerif_aboutus_feature4_text');
 
 						if( !empty($zerif_aboutus_feature4_title) ):
-							echo '<h6>'.__($zerif_aboutus_feature4_title,'zerif-lite').'</h6>';
+							echo '<h6 class="pull-right">'.__($zerif_aboutus_feature4_title,'zerif-lite').'</h6>';
 						endif;
 
 						if( !empty($zerif_aboutus_feature4_text) ):
-							echo '<p>'.__($zerif_aboutus_feature4_text,'zerif-lite').'</p>';
+							echo '<p class="pull-right">'.__($zerif_aboutus_feature4_text,'zerif-lite').'</p>';
 						endif;
 
 

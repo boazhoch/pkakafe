@@ -120,7 +120,7 @@ endif; ?>
 							if( file_exists(get_stylesheet_directory()."/images/logo.png")):
 							
 								echo '<img src="'.get_stylesheet_directory_uri().'/images/logo.png" alt="'.get_bloginfo('title').'">';
-							
+
 							else:
 								
 								echo '<img src="'.get_template_directory_uri().'/images/logo.png" alt="'.get_bloginfo('title').'">';

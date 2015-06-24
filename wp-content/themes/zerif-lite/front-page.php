@@ -10,7 +10,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 
 
 
-		<div id="content" class="site-content">
+	<div id="content" class="site-content">
 
 	<div class="container">
 
@@ -91,6 +91,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 
 
 	</div><!-- .container -->
+    </div>
 	<?php
 }else {
 
@@ -98,11 +99,11 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 
 
 			/* recaptcha */
-			
+
 			$zerif_contactus_sitekey = get_theme_mod('zerif_contactus_sitekey');
 
 			$zerif_contactus_secretkey = get_theme_mod('zerif_contactus_secretkey');
-			
+
 			$zerif_contactus_recaptcha_show = get_theme_mod('zerif_contactus_recaptcha_show');
 
 			if( isset($zerif_contactus_recaptcha_show) && $zerif_contactus_recaptcha_show != 1 && !empty($zerif_contactus_sitekey) && !empty($zerif_contactus_secretkey) ) :
@@ -117,8 +118,8 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 
 		        if( !$captcha ){
 
-		          $hasError = true;    
-		          
+		          $hasError = true;
+
 		        }
 
 		        $response = wp_remote_get( "https://www.google.com/recaptcha/api/siteverify?secret=".$zerif_contactus_secretkey."&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR'] );
@@ -236,15 +237,15 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 
 
 				$zerif_contactus_email = get_theme_mod('zerif_contactus_email');
-				
+
 				if( empty($zerif_contactus_email) ):
-				
+
 					$emailTo = get_theme_mod('zerif_email');
-				
+
 				else:
-					
+
 					$emailTo = $zerif_contactus_email;
-				
+
 				endif;
 
 
@@ -381,14 +382,14 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 			<div class="container">
 				<!-- SECTION HEADER -->
 				<div class="section-header">
-					
+
 					<?php
-					
+
 						$zerif_contactus_title = get_theme_mod('zerif_contactus_title','Get in touch');
 						if ( !empty($zerif_contactus_title) ):
 							echo '<h2 class="white-text">'.$zerif_contactus_title.'</h2>';
 						endif;
-					
+
 						$zerif_contactus_subtitle = get_theme_mod('zerif_contactus_subtitle');
 						if(isset($zerif_contactus_subtitle) && $zerif_contactus_subtitle != ""):
 							echo '<h6 class="white-text">'.$zerif_contactus_subtitle.'</h6>';
@@ -446,38 +447,38 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 
 						<input type="hidden" name="submitted" id="submitted" value="true" />
 
-						<div class="col-lg-4 col-sm-4 pull-right" data-scrollreveal="enter left after 0s over 1s">
+						<div class="col-xs-12 col-lg-4 col-sm-4 pull-right" data-scrollreveal="enter left after 0s over 1s">
 
 							<input required="required" type="text" name="myname" placeholder="שמך" class="form-control input-box" value="<?php if(isset($_POST['myname'])) echo esc_attr($_POST['myname']);?>">
 
 						</div>
 
-						<div class="col-lg-4 col-sm-4 pull-right" data-scrollreveal="enter left after 0s over 1s">
+						<div class="col-xs-12 col-lg-4 col-sm-4 pull-right" data-scrollreveal="enter left after 0s over 1s">
 
 							<input required="required" type="email" name="myemail" placeholder="אימייל" class="form-control input-box" value="<?php if(isset($_POST['myemail'])) echo is_email($_POST['myemail']) ? $_POST['myemail'] : ""; ?>">
 
 						</div>
 
-						<div class="col-lg-4 col-sm-4 pull-right" data-scrollreveal="enter left after 0s over 1s">
+						<div class="col-xs-12 col-lg-4 col-sm-4 pull-right" data-scrollreveal="enter left after 0s over 1s">
 
-							<input required="required" type="text" name="mysubject" placeholder="נושא" class="form-control input-box" value="<?php if(isset($_POST['mysubject'])) echo esc_attr($_POST['mysubject']);?>">
+							<input required="required" type="tel" name="phone" placeholder="טלפון" class="form-control input-box" value="<?php if(isset($_POST['phone'])) echo esc_attr($_POST['phone']);?>">
 
 						</div>
 
-						<div class="col-lg-12 col-sm-12" data-scrollreveal="enter right after 0s over 1s">
+						<div class="col-xs-12 col-lg-12 col-sm-12" data-scrollreveal="enter right after 0s over 1s">
 
 							<textarea name="mymessage" class="form-control textarea-box" placeholder="מהות הפנייה"><?php if(isset($_POST['mymessage'])) { echo esc_html($_POST['mymessage']); } ?></textarea>
 
 						</div>
-	
+
 						<?php
 							$zerif_contactus_button_label = get_theme_mod('zerif_contactus_button_label','שלח');
 							if( !empty($zerif_contactus_button_label) ):
-								echo '<button class="btn btn-primary custom-button" type="submit" data-scrollreveal="enter left after 0s over 1s">'.$zerif_contactus_button_label.'</button>';
+								echo '<div class="col-xs-12"><button class="btn btn-primary custom-button" type="submit" data-scrollreveal="enter left after 0s over 1s">'.$zerif_contactus_button_label.'</button></div>';
 							endif;
 						?>
-						
-						<?php 
+
+						<?php
 
 							$zerif_contactus_sitekey = get_theme_mod('zerif_contactus_sitekey');
 							$zerif_contactus_secretkey = get_theme_mod('zerif_contactus_secretkey');
@@ -499,6 +500,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 
 			</div> <!-- / END CONTAINER -->
 
+
 		</section> <!-- / END CONTACT US SECTION-->
 
 	   <!-- GOOGLE MAP SECTION -->
@@ -510,6 +512,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 			?>
 
 		</section>
+
 		<?php
 	endif;
 

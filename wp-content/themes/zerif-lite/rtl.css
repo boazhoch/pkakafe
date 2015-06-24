@@ -276,6 +276,22 @@ h5 {
 h6 {
 	font-size: 16px;
 }
+
+/*--------------------------------------------------------------
+   General
+--------------------------------------------------------------*/
+.no-pad {
+	padding: 0px;
+}
+
+.no-marg {
+	margin: 0px;
+}
+
+.clear-float {
+	float: none !important;
+}
+
 /*--------------------------------------------------------------
 3.0 Buttons
 --------------------------------------------------------------*/
@@ -1509,7 +1525,7 @@ object {
 .intro-text{
 	text-align: center;
 	color: #FFF;
-	margin-top: 25%;
+	margin-top: 0px;
 	line-height: 65px;
 	z-index: 0;
 	text-transform: uppercase;
@@ -1814,7 +1830,7 @@ width: -webkit-calc(100% / 4);
 	margin-top: -15px;
 }
 .about-us p {
-	text-align: left;
+	text-align: right;
 	color: #939393;
 }
 .about-us .column {
@@ -2387,10 +2403,12 @@ width: -webkit-calc(100% / 4);
 	box-shadow: none;
 	display: block;
 	z-index: 5;
+	height: 250px;
 }
 .feedback-inner-bg {
 	background: rgba(0,0,0,0.5);
 	padding: 25px;
+	height: 100%;
 }
 .feedback-box .message {
 	font-size: 15px;
@@ -2499,6 +2517,12 @@ width: -webkit-calc(100% / 4);
 	padding-bottom: 35%;
 	overflow: hidden;
 	margin-bottom: 13px;
+}
+
+@media(max-width:767px) {
+	#map-canvas {
+		padding-bottom: 70%;
+	}
 }
 
 /*---------------------------------------
@@ -2854,6 +2878,10 @@ article .posted-on a:hover{
 }
 @media (max-width: 767px) {
 
+	.navbar-inverse .navbar-nav>li>a {
+		text-align: right;
+	}
+
 	.navbar-inverse .navbar-nav li:hover > ul.sub-menu {
 		display: none;
 	}
@@ -2955,7 +2983,7 @@ article .posted-on a:hover{
 		font-size: 6.5vw;
 	}
 	.intro-text{
-	    margin-top: 40%;
+	    margin-top: 0px;
         font-size: 32px;
         line-height: 37px;
     }

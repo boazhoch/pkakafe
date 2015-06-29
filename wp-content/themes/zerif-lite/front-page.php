@@ -415,7 +415,8 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 
 
 
-						if(isset($nameError) && $nameError != '') :
+
+										if(isset($nameError) && $nameError != '') :
 
 							echo '<div class="notification error"><p>'.esc_html($nameError).'</p></div>';
 
